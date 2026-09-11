@@ -1,0 +1,102 @@
+/* ---------------------------------------------
+   Conteneur principal
+--------------------------------------------- */
+.commentSection {
+  /* Mise en forme de la carte */
+  width: 50%;                /* demi-largeur */
+  margin: 2rem auto;         /* centré + espacement vertical */
+  padding: 1rem;             /* espace interne */
+  background: #fafafa;       /* fond léger */
+  border-radius: 8px;        /* arrondi des coins */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  .commentSection {
+    width: 90%;
+  }
+}
+
+
+/* ---------------------------------------------
+   Titre de la section
+--------------------------------------------- */
+.commentsTitle {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+
+/* ---------------------------------------------
+   Liste de commentaires
+--------------------------------------------- */
+.commentList {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  max-height: 300px;         /* optionnel : limite la hauteur */
+  overflow-y: auto;
+}
+
+.commentItem {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.commentAuthor {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #2c3e50;
+}
+
+.commentContent {
+  color: #555;
+  line-height: 1.4;
+}
+
+
+/* ---------------------------------------------
+   Formulaire de commentaire
+--------------------------------------------- */
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.commentTextarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 80px;
+  box-sizing: border-box;
+}
+
+.commentButton {
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.commentButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.commentButton:not(:disabled):hover {
+  background-color: #45a049;
+}
